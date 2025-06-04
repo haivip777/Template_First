@@ -1,0 +1,37 @@
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollText 30s linear infinite;
+}
+.marquee-text {
+  margin: 0 2vmax;
+}
+.marquee-text h2{
+  font-size: 40px;
+  line-height: 52px;
+  color: #171717;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marquee-text h2 {
+    font-size: 28px;
+    line-height: 36px;
+  } 
+}

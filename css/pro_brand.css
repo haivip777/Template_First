@@ -1,0 +1,46 @@
+.pro__brand {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vmax;
+  align-items: center;
+}
+
+.pro__brand-brands {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vmax;
+  width: 100%;
+}
+.pro__brand-brands_img{
+  flex: 1; /* Mỗi ảnh chiếm ~1/3 chiều ngang, trừ khoảng cách */
+  max-width: 300px;                /* Giới hạn chiều rộng để không quá to */
+  aspect-ratio: 21 / 9;
+  border-radius: 10px;
+  overflow: hidden;               /* Cắt ảnh thừa nếu có */
+}
+.pro__brand-brands_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: inherit; /* nếu muốn bo góc ảnh luôn */
+}
+
+@media screen and (max-width: 768px) {
+  .pro__brand {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .pro__brand-brands {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2vmax;
+  }
+}

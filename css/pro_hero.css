@@ -1,0 +1,125 @@
+.pro__hero {
+  background-image: url('../assets/banner1.jpg');
+  background-position: center center; 
+  background-size: cover;
+  height: 100vh;
+  width: 100%;                           
+  overflow: hidden; /* tránh scroll nếu ảnh bị lớn */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+.pro__hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 50%;
+  padding: 0 30px;
+}
+.pro__hero-sub p {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.pro__hero-title h1 {
+  font-size: 60px;
+  line-height: 66px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+.pro__hero-text p {
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+.pro__hero-btn {
+  margin-top: 13.5px;
+}
+.pro__hero-btn button {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #0c0c0c;
+  background-color: #ffc356;
+  border-width: 0px;
+  border-radius: 99px;
+  padding: 13px 50px;
+}
+.pro__hero-btn button:hover {
+  background-color: #ffd68b;
+}
+.pro__hero-footer {
+  border-top: solid 1px #e6e6e6;
+  max-width: 1410px;
+  width: 98%;
+  margin: 0 auto;
+  padding: 12px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.pro__hero-footer a {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+}
+.pro__hero-footer:hover a {
+  color: #ffc356;
+}
+
+@media screen and (max-width: 768px) {
+  .pro__hero {
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 134px;
+  }
+  .pro__hero-content {
+    width: 100%;
+    padding-top: 132px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .pro__hero-sub p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .pro__hero-title h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .pro__hero-text p {
+    font-size: 17px;
+    line-height: 27px;
+  }
+  .pro__hero-btn button {
+    line-height: 20px;
+  }
+  .pro__hero-footer {
+    width: 95%;
+    position: relative;
+    padding: 9px 0;
+  }
+  .pro__hero-footer a {
+    font-size: 14px;
+    line-height: 20px;
+    }
+}

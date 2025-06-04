@@ -1,0 +1,34 @@
+.pro__article {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 3vmax;
+}
+.pro__article-item {
+  display: flex;
+  flex-direction: row;
+  gap: 3vmax;
+}
+.pro__article-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vmax;
+}
+.pro__article-img {
+  flex: 1;
+  border-radius: 15px;
+} 
+.pro__article-img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+@media screen and (max-width: 768px) {
+  .pro__article {
+    padding: 0 15px;
+  }
+}
