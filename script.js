@@ -1,5 +1,6 @@
 // Thanh trượt slide có thể kéo được ở phần feature_items
 const slider = document.querySelector('.pro__feature-items');
+const slider2 = document.querySelector('.pro__service');
 
 let isDown = false;
 let startX;
@@ -109,5 +110,27 @@ dots.forEach(dot => {
     // Đổi ảnh
     const newImg = this.getAttribute('data-img');
     image1.src = newImg;
+  });
+});
+
+const faqItems = document.querySelectorAll('.pro__question-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.pro__question-question');
+  const icon = item.querySelector('.icon');
+
+  question.addEventListener('click', () => {
+    // Đóng tất cả
+    faqItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active');
+        i.querySelector('.icon').textContent = '+';
+      }
+    });
+
+    // Toggle câu hiện tại
+    const isActive = item.classList.contains('active');
+    item.classList.toggle('active');
+    icon.textContent = isActive ? '+' : '−';
   });
 });

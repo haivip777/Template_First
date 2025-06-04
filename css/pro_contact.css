@@ -1,0 +1,72 @@
+.pro__contact {
+  padding-top: 6vmax;
+  padding-bottom: 6vmax;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: url('../assets/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.pro__contact-container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.pro__contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+  height: fit-content;
+  width: 40%;
+}
+.pro__contact-email {
+  display: flex;
+  flex-direction: row;
+  margin-top: 19px;
+}
+.pro__contact-email input {
+  border-radius: 99px;
+  border-style: solid;
+  border-width: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  padding: 14px 20px;
+  margin-right: 20px;
+  width: 100%;
+}
+.pro__contact-email button {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  border-radius: 99px;
+  border: none;
+  outline: none;
+  padding: 13px 50px;
+  background: #ffc356;
+  margin-right: 4vmax;
+}
+
+@media screen and (max-width: 768px) {
+  .pro__contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmax;
+    height: fit-content;
+    width: 100%;
+  }
+  .pro__contact-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .pro__contact-email {
+    margin-top: 2vmax;
+  } 
+  .pro__contact-email button {
+    margin-right: 0;
+  }
+}
