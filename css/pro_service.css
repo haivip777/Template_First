@@ -27,13 +27,14 @@
 
 
 @media (max-width: 768px) {
-  /* .pro__service {
+  .pro__service {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 16px;
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     cursor: grab;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -41,7 +42,7 @@
   }
   .pro__service-items::-webkit-scrollbar {
     display: none;
-  } */
+  }
   .pro__service-item_title p {
     font-size: 17px;
     line-height: 27px;
@@ -52,7 +53,7 @@
   }
 
   .pro__service-item {
-    flex: 0 0 80%;
+    flex: 0 0 66%;
     scroll-snap-align: start;
     padding-left: 16px;
   }

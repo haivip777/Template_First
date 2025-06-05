@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./css/pro_feature.css">
   <link rel="stylesheet" href="./css/pro_list.css">
   <link rel="stylesheet" href="./css/pro_time.css">
+  <link rel="stylesheet" href="./css/pro_detail.css">
   <link rel="stylesheet" href="./css/pro_product.css">
   <link rel="stylesheet" href="./css/pro_sub.css">
   <link rel="stylesheet" href="./css/pro_article.css">
@@ -27,27 +28,29 @@
 <body>
   <div class="container">
     <div class="pro__hero">
-      <div class="pro__hero-content">
-        <div class="pro__hero-sub">
-          <p>Beosound a1</p>
+      <div class="pro__hero-container">
+        <div class="pro__hero-content">
+          <div class="pro__hero-sub">
+            <p>Beosound a1</p>
+          </div>
+          <div class="pro__hero-title">
+            <h1>Powerful sound. In the palm of your hand.</h1>
+          </div>
+          <div class="pro__hero-text">
+            <p>Delivering a vibrant and powerful sound experience in a compact design, 
+              Beosound A1 2nd Gen is the perfect choice for you to enjoy music anytime, 
+              anywhere – from outdoor picnics to private relaxing moments.
+            </p>
+          </div>
+          <div class="pro__hero-btn">
+            <a href="#">
+              <button>Shop now</button>
+            </a>
+          </div>
         </div>
-        <div class="pro__hero-title">
-          <h1>Powerful sound. In the palm of your hand.</h1>
+        <div class="pro__hero-footer">
+          <a href="">Scroll to discover</a>
         </div>
-        <div class="pro__hero-text">
-          <p>Delivering a vibrant and powerful sound experience in a compact design, 
-            Beosound A1 2nd Gen is the perfect choice for you to enjoy music anytime, 
-            anywhere – from outdoor picnics to private relaxing moments.
-          </p>
-        </div>
-        <div class="pro__hero-btn">
-          <a href="#">
-            <button>Shop now</button>
-          </a>
-        </div>
-      </div>
-      <div class="pro__hero-footer">
-        <a href="">Scroll to discover</a>
       </div>
     </div>
     <div class="pro__feature">
@@ -236,9 +239,166 @@
         </div>
       </div>
     </div>
-    <!-- <div class="pro__detail">
-      Detail
-    </div> -->
+    <section class="pro__detail">
+      <div class="pro__detail-container">
+        <!-- Hình ảnh sản phẩm -->
+        <div class="pro__detail-gallery">
+          <div class="thumbnail-list">
+            <img class="mini active1" src="./assets/thum_black.webp" data-img="./assets/detail_black.webp" alt="">
+            <img class="mini" src="./assets/thum_white.webp"  data-img="./assets/detail_white.webp" alt="">
+            <img class="mini" src="./assets/thum_gold.webp"  data-img="./assets/detail_gold.webp" alt="">
+            <img class="mini" src="./assets/thum_bb.webp"  data-img="./assets/detail_bb.webp" alt="">
+            <img class="mini" src="./assets/thum_pink.webp"  data-img="./assets/detail_pink.webp" alt="">
+            <img class="mini" src="./assets/thum_green.webp"  data-img="./assets/detail_green.webp" alt="">
+          </div>
+          <div class="main-image">
+            <img src="./assets/detail_black.webp" id="big-image" alt="">
+          </div>
+        </div>
+        <div class="pro__detail-info">
+          <label class="pro__label">
+            Best seller
+          </label>
+          <div class="pro__info">
+            <a href="#">Beosound A1 2nd Gen</a>
+            <h3>$299.00</h3>
+            <p>Tax included.<span>Shipping</span> calculated at checkout.</p>
+            <div class="pro__rating">
+              <img src="./assets/star.png" alt="">
+              <img src="./assets/star.png" alt="">
+              <img src="./assets/star.png" alt="">
+              <img src="./assets/star.png" alt="">
+              <img src="./assets/star.png" alt="">
+              <span>(4.9)</span>
+            </div>
+          </div>
+          <div class="color-section">
+            <label class="color-label" style="font-weight: bold;">Color:</label> <span id="colorName">Black</span>
+            <ul class="color-list">
+              <li class="color-item active" style="background-color: black;" data-name="Black" data-img="./assets/detail_black.webp"></li>
+              <li class="color-item" style="background-color: #eee;" data-name="Gray" data-img="./assets/detail_white.webp"></li>
+              <li class="color-item" style="background-color: gold;" data-name="Yellow" data-img="./assets/detail_gold.webp"></li>
+              <li class="color-item" style="background-color: #d9f1fd;" data-name="Sky Blue" data-img="./assets/detail_bb.webp"></li>
+              <li class="color-item" style="background-color: #d9a4ab;" data-name="Pink" data-img="./assets/detail_pink.webp"></li>
+              <li class="color-item" style="background-color: mediumseagreen;" data-name="Green" data-img="./assets/detail_green.webp"></li>
+            </ul>
+
+          </div>
+          <div class="pro__slider">
+            <p>Very low stock (5 units)</p>
+          </div>
+          <div class="pro__quantity">
+            <label class="quantity-label">Quantity</label>
+            <div class="quantity-control">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="pro__buttons">
+            <button class="add-to-cart">Add To Cart</button>
+            <button class="buy-now">Buy It Now</button>
+          </div>
+          <div class="pro__policy">
+            <div class="policy-item">
+              <img src="./assets/policy1.png" alt="">
+              <span>Free shipping on all U.S. orders of $40+</span>
+            </div>
+            <div class="policy-item">
+              <img src="./assets/policy2.png" alt="">
+              <span>Free returns and exchanges</span>
+            </div>
+            <div class="policy-item">
+              <img src="./assets/policy3.png" alt="">
+              <span>30-Day Money-Back Guarantee</span>
+            </div>
+          </div>
+          <div class="pro__text">
+            <p>This store is a demo of the Beae template. The products from this store are from the catalog of <span>Bang Olufsen</span></p>
+          </div>
+          <div class="promo-box">
+            <div class="promo-icon">
+              <img src="./assets/promo.png" alt="">
+            </div>
+            <div class="promo-content">
+              <div class="promo-text">Slash $40 off. Your wallet will thank you.</div>
+              <div class="promo-actions">
+                <div class="promo-code">SUMMER2025</div>
+                <div class="copy-link">Copy code</div>
+              </div>
+            </div>
+          </div>
+          <div class="pro__ques">
+            <div class="pro__ques-item">
+              <button class="pro__ques-question">
+              Sound
+                <span class="icon">+</span>
+              </button>
+              <div class="pro__ques-answer">
+                <dl>
+                  <dt><strong>Recommended Room Size</strong></dt>
+                  <dd>5–30 m²<br>50–300 ft² room</dd>
+
+                  <dt><strong>Speaker Configuration</strong></dt>
+                  <dd>1 x 3 ½" woofer<br>1 x 0.6" tweeter</dd>
+
+                  <dt><strong>Amplifier</strong></dt>
+                  <dd>1 x 30 W class D for tweeter<br>1 x 30 W class D for woofer<br>Total: 60 W</dd>
+
+                  <dt><strong>Frequency Range</strong></dt>
+                  <dd>55–20.000 Hz</dd>
+
+                  <dt><strong>Maximum Sound Pressure Level (SPL) @1m</strong></dt>
+                  <dd>92 dB SPL</dd>
+
+                  <dt><strong>Bass Capability</strong></dt>
+                  <dd>62 dB SPL</dd>
+
+                  <dt><strong>Stereo Pairing</strong></dt>
+                  <dd>Yes (Available between two Beosound A1 2nd Gens)</dd>
+
+                  <dt><strong>Customizable Sound EQ</strong></dt>
+                  <dd>Presets available and fully customisable through the Bang & Olufsen App</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="pro__ques-item">
+              <button class="pro__ques-question">
+                Design
+                <span class="icon">+</span>
+              </button>
+              <div class="pro__ques-answer">
+                <p>Yes! Beosound A1 is IP67 rated, meaning it is both waterproof and dustproof, making it ideal for outdoor use, whether at the beach or in the rain.</p>
+              </div>
+            </div>
+            <div class="pro__ques-item">
+              <button class="pro__ques-question">
+                Power
+                <span class="icon">+</span>
+              </button>
+              <div class="pro__ques-answer">
+                <p>Absolutely! Beosound A1 connects seamlessly with your smartphone via Bluetooth, allowing you to stream music, podcasts, and more with ease.</p>
+              </div>
+            </div>
+            <div class="pro__ques-item">
+              <button class="pro__ques-question">
+                Connectivity
+                <span class="icon">+</span>
+              </button>
+              <div class="pro__ques-answer">
+                <p>Yes, Beosound A1 supports both Amazon Alexa and Google Assistant, allowing you to control your music, smart home devices, and more with just your voice.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro__share">
+            <p>Share</p>
+            <img src="./assets/share.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
     <div class="pro__product">
       <div class="pro__product-content">
         <div class="pro__product-title">
@@ -374,11 +534,11 @@
                 <div class="pro__product-item_price">
                   <p>$1'549.00</p>
                 </div>
-                <div class="pro__product-item_options">
-                  <span class="dot black" data-img="./assets/product_img4_1.webp"></span>
+                <!-- <div class="pro__product-item_options">
+                  <span class="dot black"   ="./assets/product_img4_1.webp"></span>
                   <span class="dot gray" data-img="./assets/product_img4_2.webp"></span>
                   <span class="dot white" data-img="./assets/product_img4_3.webp"></span>
-                </div>
+                </div> -->
                 <div class="pro__product-item_text">
                   <p>Very low stock (3 units)</p>
                 </div>
@@ -688,22 +848,68 @@
       <div class="pro__review-icon">
         <img src="./assets/rv.png" alt="review icon">
       </div>
-      <div class="pro__review-content">
-        <div class="pro__review-content_text">
-          <h3>If you're looking for quality portable speaker that majors on both style
-             and substance – something to pack into your picnic hamper, perhaps – this is it.
-          </h3>
-        </div>
-        <div class="pro__review-content_rate">
-          <img src="./assets/star_black.png" alt="">
-          <img src="./assets/star_black.png" alt="">
-          <img src="./assets/star_black.png" alt="">
-          <img src="./assets/star_black.png" alt="">
-          <img src="./assets/star_black.png" alt="">
-        </div>
-        <div class="pro__review-content_sub">
-          <p>Daniel K.</p>
-          <p>From Germany</p>
+      <div class="swiper custom-swiper">
+        <div class="swiper-wrapper custom-swiper-wrapper">
+          <div class="swiper-slide custom-swiper-slide">
+            <div class="pro__review-content">
+              <div class="pro__review-content_text">
+                <h3>If you're looking for quality portable speaker that majors on both style
+                  and substance – something to pack into your picnic hamper, perhaps – this is it.
+                </h3>
+              </div>
+              <div class="pro__review-content_rate">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+              </div>
+              <div class="pro__review-content_sub">
+                <p>Daniel K.</p>
+                <p>From Germany</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide custom-swiper-slide">
+            <div class="pro__review-content">
+              <div class="pro__review-content_text">
+                <h3>"The Beosound A1 from Bang & Olufsen is still one of the best small Bluetooth 
+                  speakers. And now in an improved and more robust version."
+                </h3>
+              </div>
+              <div class="pro__review-content_rate">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+              </div>
+              <div class="pro__review-content_sub">
+                <p>Emma L.</p>
+                <p>From United Kingdom</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide custom-swiper-slide">
+            <div class="pro__review-content">
+              <div class="pro__review-content_text">
+                <h3>"The sonic performance is excellent, and factor in the various design 
+                  tweaks and improvements and the Beosound A1 is a stunning portable speaker."
+                </h3>
+              </div>
+              <div class="pro__review-content_rate">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+                <img src="./assets/star_black.png" alt="">
+              </div>
+              <div class="pro__review-content_sub">
+                <p>Sofia M.</p>
+                <p>From United States</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

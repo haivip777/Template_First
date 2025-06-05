@@ -4,19 +4,35 @@
   background-size: cover;
   height: 100vh;
   width: 100%;                           
-  overflow: hidden; /* tránh scroll nếu ảnh bị lớn */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
+  overflow: hidden;
 }
+.pro__hero-container {
+  padding: 0 30px;
+  margin: 0 auto;
+  max-width: 1470px;
+  position: relative;
+  height: 100%;
+}
+
 .pro__hero-content {
+  position: absolute;
+  right: 30px;
+  width: calc((100% - 60px) * 0.5);
+  top: 0;
+  bottom: 70px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 11px;
-  width: 50%;
-  padding: 0 30px;
+}
+
+.pro__hero-footer {
+  position: absolute;
+  bottom: 0;
+  left: 30px; 
+  right: 30px;
+  border-top: solid 1px #e6e6e6;
+  padding: 1vmax 0;
 }
 .pro__hero-sub p {
   font-size: 14px;
@@ -58,17 +74,6 @@
 .pro__hero-btn button:hover {
   background-color: #ffd68b;
 }
-.pro__hero-footer {
-  border-top: solid 1px #e6e6e6;
-  max-width: 1410px;
-  width: 98%;
-  margin: 0 auto;
-  padding: 12px 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 .pro__hero-footer a {
   display: block;
   font-size: 18px;
@@ -87,6 +92,9 @@
 @media screen and (max-width: 768px) {
   .pro__hero {
     height: fit-content;
+  }
+  /* .pro__hero {
+    height: fit-content;
     align-items: center;
     justify-content: center;
     gap: 134px;
@@ -97,6 +105,26 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  } */
+  .pro__hero-container {
+    height: auto;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15vmax;
+  }
+
+  .pro__hero-content {
+    padding-top: 15vmax;
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .pro__hero-footer {
+    position: static;
+    width: 100%;
   }
   .pro__hero-sub p {
     font-size: 12px;
@@ -112,11 +140,6 @@
   }
   .pro__hero-btn button {
     line-height: 20px;
-  }
-  .pro__hero-footer {
-    width: 95%;
-    position: relative;
-    padding: 9px 0;
   }
   .pro__hero-footer a {
     font-size: 14px;

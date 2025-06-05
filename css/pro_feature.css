@@ -33,6 +33,10 @@
   flex-direction: column;
   gap: 1vmax;
 }
+.pro__feature-item_icon img {
+  width: 43px;
+  height: auto;
+}
 .pro__feature-item_title p {
   font-size: 18px;
   line-height: 28px;
@@ -42,8 +46,14 @@
 
 
 @media (max-width: 768px) {
+  .pro__feature {
+    padding-top: 4vmax;
+    padding-bottom: 3vmax;
+  }
   .pro__feature-content {
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .pro__feature-items {
     display: flex;
@@ -70,7 +80,7 @@
   }
 
   .pro__feature-item {
-    flex: 0 0 80%;
+    flex: 0 0 83%;
     scroll-snap-align: start;
     padding-left: 16px;
   }

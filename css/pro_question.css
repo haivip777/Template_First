@@ -81,7 +81,11 @@
     font-size: 17px;
     line-height: 27px;
   }
+  .pro__question-question {
+    letter-spacing: 0px;
+  }
   .pro__question-answer {
     font-size: 14px;
   }
+
 }

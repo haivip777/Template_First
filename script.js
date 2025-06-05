@@ -1,6 +1,7 @@
 // Thanh trượt slide có thể kéo được ở phần feature_items
 const slider = document.querySelector('.pro__feature-items');
 const slider2 = document.querySelector('.pro__service');
+const slider3 = document.querySelector('.pro__article');
 
 let isDown = false;
 let startX;
@@ -30,6 +31,59 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 1.5; // tốc độ kéo
   slider.scrollLeft = scrollLeft - walk;
 });
+
+// Thanh trượt slide có thể kéo được ở phần service
+
+ slider2.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider2.classList.add('dragging');
+  startX = e.pageX - slider2.offsetLeft;
+  scrollLeft = slider2.scrollLeft;
+});
+
+slider2.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider2.classList.remove('dragging');
+});
+
+slider2.addEventListener('mouseup', () => {
+  isDown = false;
+  slider2.classList.remove('dragging');
+});
+
+slider2.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider2.offsetLeft;
+  const walk = (x - startX) * 1.5; // tốc độ kéo
+  slider2.scrollLeft = scrollLeft - walk;
+});
+// Thanh trượt slide có thể kéo được ở phần article
+slider3.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider3.classList.add('dragging');
+  startX = e.pageX - slider3.offsetLeft;
+  scrollLeft = slider3.scrollLeft;
+});
+
+slider3.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider3.classList.remove('dragging');
+});
+
+slider3.addEventListener('mouseup', () => {
+  isDown = false;
+  slider3.classList.remove('dragging');
+});
+
+slider3.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider3.offsetLeft;
+  const walk = (x - startX) * 1.5; // tốc độ kéo
+  slider3.scrollLeft = scrollLeft - walk;
+});
+
 
 // Mốc thời gian đếm ngược: 30 ngày kể từ bây giờ
 const targetDate = new Date();
@@ -65,29 +119,18 @@ const swiper = new Swiper('.mySwiper', {
   slidesPerView: 'auto',
   freeMode: true,
   spaceBetween: 0,
-  // breakpoints: {
-  //   0: {
-  //     slidesPerView: 1
-  //   },
-  //   480: {
-  //     slidesPerView: 1.5
-  //   },
-  //   768: {
-  //     slidesPerView: 2
-  //   },
-  //   1024: {
-  //     slidesPerView: 4
-  //   },
-  //   1200: {
-  //     slidesPerView: 4
-  //   }
-  // }
+  
+});
+// Swiper cho phần review
+const customSwiper = new Swiper(".custom-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 16,
 });
 
 // Chọn từ option
 const dots = document.querySelectorAll('.dot');
 const image1 = document.getElementById('product-image1');
-const image4 = document.getElementById('product-image4');
+// const image4 = document.getElementById('product-image4');
 
 dots.forEach(dot => {
   const img = dot.getAttribute('data-img');
@@ -95,7 +138,7 @@ dots.forEach(dot => {
   // Hover vào thì đổi ảnh tạm
   dot.addEventListener('mouseenter', () => {
     image1.src = img;
-    image4.src = img;
+    // image4.src = img;
   });
 
   // Rời chuột thì quay lại ảnh đã chọn (nếu chưa click)
@@ -113,6 +156,8 @@ dots.forEach(dot => {
   });
 });
 
+
+// Phần câu hỏi
 const faqItems = document.querySelectorAll('.pro__question-item');
 
 faqItems.forEach(item => {
@@ -132,5 +177,86 @@ faqItems.forEach(item => {
     const isActive = item.classList.contains('active');
     item.classList.toggle('active');
     icon.textContent = isActive ? '+' : '−';
+  });
+});
+
+
+//Detail color section
+const items = document.querySelectorAll('.color-item');
+const nameDisplay = document.getElementById('colorName');
+const imageBig = document.getElementById('big-image');
+
+items.forEach(item => {
+  const imgBig = item.getAttribute('data-img');
+
+  // Hover vào thì đổi ảnh tạm
+  item.addEventListener('mouseenter', () => {
+    imageBig.src = imgBig;
+    items.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+  });
+
+  item.addEventListener('mouseleave', () => {
+    imageBig.src = selectedImage;
+  });
+
+  item.addEventListener('click', () => {
+    items.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    nameDisplay.textContent = item.getAttribute('data-name');
+    const newImgBig = this.getAttribute('data-img');
+    imageBig.src = newImgBig;
+  });
+});
+
+// Di chuột vào phần ảnh sản phẩm để hiện ảnh lớn
+const thumbs = document.querySelectorAll('.mini');
+// const imageBig = document.getElementById('big-image');
+
+thumbs.forEach(item => {
+  const imgBig = item.getAttribute('data-img');
+
+  // Hover vào thì đổi ảnh tạm
+  item.addEventListener('mouseenter', () => {
+    imageBig.src = imgBig;
+    thumbs.forEach(i => i.classList.remove('active1'));
+    item.classList.add('active1');
+  });
+
+  item.addEventListener('mouseleave', () => {
+    imageBig.src = selectedImage;
+  });
+
+  item.addEventListener('click', () => {
+    thumbs.forEach(i => i.classList.remove('active1'));
+    item.classList.add('active1');
+    const newImgBig = this.getAttribute('data-img');
+    imageBig.src = newImgBig;
+  });
+});
+
+
+
+
+// Phần câu hỏi trong phần detail
+const faqItems2 = document.querySelectorAll('.pro__ques-item');
+
+faqItems2.forEach(item => {
+  const question2 = item.querySelector('.pro__ques-question');
+  const icon2 = item.querySelector('.icon');
+
+  question2.addEventListener('click', () => {
+    // Đóng tất cả
+    faqItems2.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active');
+        i.querySelector('.icon').textContent = '+';
+      }
+    });
+
+    // Toggle câu hiện tại
+    const isActive = item.classList.contains('active');
+    item.classList.toggle('active');
+    icon2.textContent = isActive ? '+' : '−';
   });
 });

@@ -8,6 +8,17 @@
   align-items: center;
   gap: 1vmax;
 }
+
+.custom-swiper-wrapper {
+  display: flex;
+}
+
+.custom-swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .pro__review-content {
   margin-left: 12vmax;
   margin-right: 12vmax;

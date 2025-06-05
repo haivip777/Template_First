@@ -30,5 +30,29 @@
 @media screen and (max-width: 768px) {
   .pro__article {
     padding: 0 15px;
+    flex-direction: row;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+     overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    /* overflow: hidden; */
+    margin-bottom: 3vmax;
+  }
+  .pro__article-item {
+    flex-direction: column-reverse;
+    flex: 0 0 84%;
+    scroll-snap-align: start;
+    padding-left: 15px;
+    gap: 2vmax;
+  }
+  .pro__article::-webkit-scrollbar {
+    display: none;
+  }
+  .pro__article.dragging {
+    cursor: grabbing;
+    user-select: none;
   }
 }
