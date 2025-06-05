@@ -438,6 +438,9 @@ dd {
   height: 16px;
   cursor: pointer;
 }
+.pro__detail-swiper {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   
@@ -473,6 +476,20 @@ dd {
   }
   .pro__detail-gallery {
     position: relative;
+    display: none;
+    width: 100%;
+    top: 0;
+  }
+  .pro__detail-swiper {
+    display: block;
+  }
+  .pro__detail-swiper img{
+    aspect-ratio: 4 / 5;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center center;
+    max-width: 100%;
+    height: auto;
   }
   .pro__label {
     font-size: 12px;
