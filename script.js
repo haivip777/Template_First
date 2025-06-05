@@ -13,17 +13,14 @@ slider.addEventListener('mousedown', (e) => {
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
 });
-
 slider.addEventListener('mouseleave', () => {
   isDown = false;
   slider.classList.remove('dragging');
 });
-
 slider.addEventListener('mouseup', () => {
   isDown = false;
   slider.classList.remove('dragging');
 });
-
 slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
@@ -32,32 +29,31 @@ slider.addEventListener('mousemove', (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
-// Thanh trượt slide có thể kéo được ở phần service
 
- slider2.addEventListener('mousedown', (e) => {
+// Thanh trượt slide có thể kéo được ở phần service
+slider2.addEventListener('mousedown', (e) => {
   isDown = true;
   slider2.classList.add('dragging');
   startX = e.pageX - slider2.offsetLeft;
   scrollLeft = slider2.scrollLeft;
 });
-
 slider2.addEventListener('mouseleave', () => {
   isDown = false;
   slider2.classList.remove('dragging');
 });
-
 slider2.addEventListener('mouseup', () => {
   isDown = false;
   slider2.classList.remove('dragging');
 });
-
 slider2.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider2.offsetLeft;
-  const walk = (x - startX) * 1.5; // tốc độ kéo
+  const walk = (x - startX) * 1.5;
   slider2.scrollLeft = scrollLeft - walk;
 });
+
+
 // Thanh trượt slide có thể kéo được ở phần article
 slider3.addEventListener('mousedown', (e) => {
   isDown = true;
@@ -65,17 +61,14 @@ slider3.addEventListener('mousedown', (e) => {
   startX = e.pageX - slider3.offsetLeft;
   scrollLeft = slider3.scrollLeft;
 });
-
 slider3.addEventListener('mouseleave', () => {
   isDown = false;
   slider3.classList.remove('dragging');
 });
-
 slider3.addEventListener('mouseup', () => {
   isDown = false;
   slider3.classList.remove('dragging');
 });
-
 slider3.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
@@ -83,7 +76,6 @@ slider3.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 1.5; // tốc độ kéo
   slider3.scrollLeft = scrollLeft - walk;
 });
-
 
 // Mốc thời gian đếm ngược: 30 ngày kể từ bây giờ
 const targetDate = new Date();
@@ -110,7 +102,7 @@ function updateCountdown() {
   document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
 }
 
-updateCountdown(); // gọi ngay lập tức
+updateCountdown();
 const interval = setInterval(updateCountdown, 1000); // cập nhật mỗi giây
 
 
@@ -125,12 +117,15 @@ const swiper = new Swiper('.mySwiper', {
 const customSwiper = new Swiper(".custom-swiper", {
   slidesPerView: 1,
   spaceBetween: 16,
+  pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
+  }
 });
 
 // Chọn từ option
 const dots = document.querySelectorAll('.dot');
 const image1 = document.getElementById('product-image1');
-// const image4 = document.getElementById('product-image4');
 
 dots.forEach(dot => {
   const img = dot.getAttribute('data-img');
@@ -138,19 +133,14 @@ dots.forEach(dot => {
   // Hover vào thì đổi ảnh tạm
   dot.addEventListener('mouseenter', () => {
     image1.src = img;
-    // image4.src = img;
   });
 
-  // Rời chuột thì quay lại ảnh đã chọn (nếu chưa click)
   dot.addEventListener('mouseleave', () => {
     image1.src = selectedImage;
   });
   dot.addEventListener('click', function () {
-    // Xoá active ở tất cả
     dots.forEach(d => d.classList.remove('active'));
-    // Thêm active cho cái được click
     this.classList.add('active');
-    // Đổi ảnh
     const newImg = this.getAttribute('data-img');
     image1.src = newImg;
   });
@@ -165,7 +155,6 @@ faqItems.forEach(item => {
   const icon = item.querySelector('.icon');
 
   question.addEventListener('click', () => {
-    // Đóng tất cả
     faqItems.forEach(i => {
       if (i !== item) {
         i.classList.remove('active');
@@ -173,7 +162,6 @@ faqItems.forEach(item => {
       }
     });
 
-    // Toggle câu hiện tại
     const isActive = item.classList.contains('active');
     item.classList.toggle('active');
     icon.textContent = isActive ? '+' : '−';
@@ -211,12 +199,10 @@ items.forEach(item => {
 
 // Di chuột vào phần ảnh sản phẩm để hiện ảnh lớn
 const thumbs = document.querySelectorAll('.mini');
-// const imageBig = document.getElementById('big-image');
 
 thumbs.forEach(item => {
   const imgBig = item.getAttribute('data-img');
 
-  // Hover vào thì đổi ảnh tạm
   item.addEventListener('mouseenter', () => {
     imageBig.src = imgBig;
     thumbs.forEach(i => i.classList.remove('active1'));
@@ -246,7 +232,6 @@ faqItems2.forEach(item => {
   const icon2 = item.querySelector('.icon');
 
   question2.addEventListener('click', () => {
-    // Đóng tất cả
     faqItems2.forEach(i => {
       if (i !== item) {
         i.classList.remove('active');
@@ -254,7 +239,6 @@ faqItems2.forEach(item => {
       }
     });
 
-    // Toggle câu hiện tại
     const isActive = item.classList.contains('active');
     item.classList.toggle('active');
     icon2.textContent = isActive ? '+' : '−';
