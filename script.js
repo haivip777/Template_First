@@ -116,11 +116,8 @@ const swiper = new Swiper('.mySwiper', {
 // Swiper cho phần review
 const customSwiper = new Swiper(".custom-swiper", {
   slidesPerView: 1,
+  freeMode: true,
   spaceBetween: 16,
-  pagination: {
-  el: '.swiper-pagination',
-  clickable: true,
-  }
 });
 
 // Chọn từ option

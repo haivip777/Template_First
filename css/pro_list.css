@@ -68,6 +68,7 @@
   }
   .number__special {
     font-size: 36px;
+    margin-top: 2vmax;
     line-height: 46px;
   }
   .pro__list-item {
